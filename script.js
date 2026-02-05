@@ -1,5 +1,6 @@
 const adressbtn = document.querySelector("#adress-form");
 const adresscolse = document.querySelector("#adress-close");
+let index = 0;
 // console.log(adressbtn);
 adressbtn.addEventListener("click", function () {
   document.querySelector(".adress-from").style.display = "flex";
@@ -7,6 +8,27 @@ adressbtn.addEventListener("click", function () {
 adresscolse.addEventListener("click", function () {
   document.querySelector(".adress-from").style.display = "none";
 });
+// slider
+const rightbtn = document.querySelector(".fa-chevron-right.next");
+const leftbtn = document.querySelector(".fa-chevron-left.prev");
+rightbtn.addEventListener("click", function () {
+  index = index + 1;
+  if (index > tmp.length - 1) {
+    index = 0;
+  }
+  document.querySelector(".slider-content-left-top").style.right =
+    index * 100 + "%";
+});
+leftbtn.addEventListener("click", function () {
+  index = index - 1;
+  if (index <= 0) {
+    index = tmp.length - 1;
+  }
+  document.querySelector(".slider-content-left-top").style.right =
+    index * 100 + "%";
+});
+const tmp = document.querySelectorAll(".slider-content-left-top img");
+console.log(tmp.length);
 // login
 const loginBtn = document.querySelector("#login-btn");
 const loginForm = document.querySelector(".login-form");
