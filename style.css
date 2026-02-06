@@ -104,7 +104,7 @@ nav ul li:nth-child(7):hover a {
   transition: all 0.3s ease;
 }
 .menu_dt ul li a {
-  color: black;
+  color: rgb(7, 7, 7);
   font-size: 16px;
 }
 .menu_dt ul li a i {
@@ -112,7 +112,7 @@ nav ul li:nth-child(7):hover a {
   font-size: 16px;
 }
 .menu_dt ul li:hover {
-  background-color: white;
+  background-color: rgb(254, 254, 254);
 }
 .menu_dt_content > ul > li:nth-child(8) {
   position: relative;
@@ -245,6 +245,9 @@ select {
 .submenu ul li:hover {
   background: none;
 }
+/* .menu_dt_content a {
+  color: #ddd;
+} */
 /* login */
 .login-form {
   position: fixed;
@@ -375,6 +378,8 @@ select {
   height: 100%;
   line-height: 38px;
   position: relative;
+  border-top: 4px solid #ddd;
+  border-bottom: 4px solid #ddd;
 }
 .slider-content-left-bottom li::before {
   display: block;
@@ -386,7 +391,8 @@ select {
   right: 0;
 }
 .slider-content-left-bottom li.active {
-  border-top: 4px solid #fff200;
+  border-top: 4px solid #00c8ff;
+  font-weight: bold;
 }
 .slider-content-left-top-btn {
   position: absolute;
@@ -438,4 +444,14 @@ select {
 }
 .slider-content-left-top {
   transition: all 0.3s ease;
+}
+/* baner-one */
+.baner-one {
+  margin-top: 40px;
+}
+.baner-one img {
+  width: 100%;
+  max-height: 200px; /* đổi số này nếu muốn cao/thấp hơn */
+  object-fit: cover;
+  border-radius: 8px;
 }

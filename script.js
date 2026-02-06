@@ -58,3 +58,36 @@ document.querySelector("#login-submit").addEventListener("click", function () {
     msg.innerText = "Sai tài khoản hoặc mật khẩu";
   }
 });
+// slider 1
+const imgNumberLi = document.querySelectorAll(".slider-content-left-bottom li");
+
+imgNumberLi.forEach(function (img, index) {
+  img.addEventListener("click", function () {
+    removeactive();
+    document.querySelector(".slider-content-left-top").style.right =
+      index * 100 + "%";
+    img.classList.add("active");
+  });
+});
+
+function removeactive() {
+  let imgactive = document.querySelector(".active");
+  if (imgactive) {
+    imgactive.classList.remove("active");
+  }
+}
+// silder 2
+// slider2
+function imgAuto() {
+  index = index + 1;
+  if (index > tmp.length - 1) {
+    index = 0;
+  }
+  removeactive();
+  document.querySelector(".slider-content-left-top").style.right =
+    index * 100 + "%";
+  tmp[index].classList.add("active");
+  // console.log(index)
+}
+
+setInterval(imgAuto, 5000);
