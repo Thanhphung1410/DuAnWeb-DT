@@ -455,3 +455,24 @@ select {
   object-fit: cover;
   border-radius: 8px;
 }
+/*slider product */
+.product-content {
+  background-color: #00c8ff;
+  padding: 12px;
+}
+.product-content-items {
+  display: flex;
+  justify-content: space-evenly;
+}
+.product-content-item {
+  width: 19%;
+  background-color: white;
+  padding: 50px 12px 12px;
+  border-radius: 5px;
+}
+.product-content-item > img {
+  width: 100%;
+}
+.product-content-title h2 {
+  font-style: italic;
+}
